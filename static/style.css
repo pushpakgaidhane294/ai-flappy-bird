@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    font-family: Arial;
+    background: linear-gradient(to bottom, #70c5ce, #ffffff);
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+canvas {
+    background: skyblue;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.scoreboard {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
