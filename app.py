@@ -39,6 +39,7 @@ def get_action():
 @app.route("/update_q", methods=["POST"])
 def update_q():
     data = request.json
+
     y, dist = get_state(data["y"], data["dist"])
     ny, ndist = get_state(data["ny"], data["ndist"])
 
