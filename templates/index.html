@@ -2,30 +2,36 @@
 <html>
 <head>
     <title>AI Flappy Bird</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
 <h1>🐦 AI Flappy Bird</h1>
 
-<div class="scoreboard">
-    Score: <span id="score">0</span> |
-    High: <span id="high">0</span> |
-    Lives: <span id="lives">❤️❤️❤️</span>
+<div id="menu">
+    <button onclick="startGame()">▶ Start Game</button>
 </div>
 
-<p id="modeText">Mode: AI</p>
+<div id="gameUI" style="display:none;">
+    <div class="scoreboard">
+        Score: <span id="score">0</span> |
+        High: <span id="high">0</span> |
+        Lives: <span id="lives">❤️❤️❤️</span>
+    </div>
 
-<canvas id="gameCanvas"></canvas>
+    <p id="modeText">Mode: AI</p>
 
-<div>
-    <button onclick="setMode('AI')">AI Mode</button>
-    <button onclick="setMode('HUMAN')">Manual Mode</button>
-</div>
+    <canvas id="gameCanvas"></canvas>
 
-<div>
-    <label>Speed:</label>
-    <input type="range" min="1" max="5" value="2" onchange="gameSpeed=this.value">
+    <div class="controls">
+        <button onclick="setMode('AI')">AI</button>
+        <button onclick="setMode('HUMAN')">Manual</button>
+        <button onclick="pauseGame()">Pause</button>
+        <button onclick="restartGame()">Restart</button>
+    </div>
+
+    <button class="jump-btn" onclick="jump()">⬆️ Jump</button>
 </div>
 
 <script src="/static/script.js"></script>
