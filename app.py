@@ -5,7 +5,7 @@ import random
 
 app = Flask(__name__)
 
-# Q-table
+# Load or create Q-table
 if os.path.exists("q_table.npy"):
     Q = np.load("q_table.npy")
 else:
@@ -41,6 +41,7 @@ def update_q():
     data = request.json
     y, dist = get_state(data["y"], data["dist"])
     ny, ndist = get_state(data["ny"], data["ndist"])
+
     action = data["action"]
     reward = data["reward"]
 
