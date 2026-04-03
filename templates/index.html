@@ -9,29 +9,38 @@
 
 <h1>🐦 AI Flappy Bird</h1>
 
-<div id="menu">
-    <button onclick="startGame()">▶ Start Game</button>
+<!-- START SCREEN -->
+<div id="startScreen">
+    <button onclick="showSettings()">▶ Start Game</button>
 </div>
 
+<!-- SETTINGS -->
+<div id="settings" style="display:none;">
+    <h2>Select Difficulty</h2>
+
+    <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <h2>Speed</h2>
+    <input type="range" id="speed" min="1" max="5" value="2">
+
+    <br><br>
+    <button onclick="startGame()">Start Playing</button>
+</div>
+
+<!-- GAME -->
 <div id="gameUI" style="display:none;">
     <div class="scoreboard">
         Score: <span id="score">0</span> |
-        High: <span id="high">0</span> |
         Lives: <span id="lives">❤️❤️❤️</span>
     </div>
 
-    <p id="modeText">Mode: AI</p>
-
     <canvas id="gameCanvas"></canvas>
 
-    <div class="controls">
-        <button onclick="setMode('AI')">AI</button>
-        <button onclick="setMode('HUMAN')">Manual</button>
-        <button onclick="pauseGame()">Pause</button>
-        <button onclick="restartGame()">Restart</button>
-    </div>
-
-    <button class="jump-btn" onclick="jump()">⬆️ Jump</button>
+    <button class="jump-btn" onclick="jump()">⬆️ TAP TO JUMP</button>
 </div>
 
 <script src="/static/script.js"></script>
