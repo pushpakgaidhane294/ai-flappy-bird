@@ -10,14 +10,25 @@
 
 <div class="scoreboard">
     Score: <span id="score">0</span> |
-    High Score: <span id="high">0</span> |
-    Lives: <span id="lives">3</span>
+    High: <span id="high">0</span> |
+    Lives: <span id="lives">❤️❤️❤️</span>
 </div>
+
+<p id="modeText">Mode: AI</p>
 
 <canvas id="gameCanvas"></canvas>
 
-<button onclick="startGame()">Start AI</button>
+<div>
+    <button onclick="setMode('AI')">AI Mode</button>
+    <button onclick="setMode('HUMAN')">Manual Mode</button>
+</div>
+
+<div>
+    <label>Speed:</label>
+    <input type="range" min="1" max="5" value="2" onchange="gameSpeed=this.value">
+</div>
 
 <script src="/static/script.js"></script>
+
 </body>
 </html>
