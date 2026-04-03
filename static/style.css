@@ -1,7 +1,8 @@
 body {
     text-align: center;
-    font-family: Arial;
-    background: linear-gradient(to bottom, #70c5ce, #ffffff);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: white;
 }
 
 h1 {
@@ -9,9 +10,10 @@ h1 {
 }
 
 canvas {
-    background: skyblue;
-    border: 2px solid black;
-    margin-top: 20px;
+    background: linear-gradient(#87CEEB, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    margin-top: 15px;
 }
 
 .scoreboard {
@@ -20,8 +22,15 @@ canvas {
 }
 
 button {
-    padding: 10px 20px;
-    margin-top: 15px;
-    font-size: 16px;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #ff7eb3;
+    color: white;
     cursor: pointer;
+}
+
+button:hover {
+    background: #ff4e8a;
 }
